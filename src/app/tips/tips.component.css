@@ -1,0 +1,6 @@
+mat-card{
+  margin: 20px;
+}
+mat-form-field, mat-select,mat-slider{
+  width: 100%;
+}

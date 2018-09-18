@@ -4,6 +4,7 @@ import {GeolocationService} from './geolocation.service';
 import {DataService} from './data.service';
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -21,6 +22,7 @@ import 'hammerjs';
 import { ListComponent } from './list/list.component';
 import { TipsComponent } from './tips/tips.component';
 import {RouterModule, Routes} from '@angular/router';
+import {HttpModule} from '@angular/http';
 const router : Routes = [
   {path : '', component: ListComponent},
   {path:'tips',component:TipsComponent},
@@ -36,6 +38,7 @@ const router : Routes = [
   ],
   imports: [
     RouterModule.forRoot(router),
+    HttpModule,
     FormsModule,
     BrowserModule,
     MatAutocompleteModule, MatBadgeModule, MatButtonModule, MatIconModule, MatSelectModule,

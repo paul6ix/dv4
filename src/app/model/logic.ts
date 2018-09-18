@@ -3,6 +3,7 @@ import {TastingRating} from './TastingRating';
 
 export class AppModel {
   // app properties
+  _id : string;
   type: string;
   notes: string;
   rating: number;

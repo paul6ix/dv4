@@ -15,7 +15,7 @@ import {
   MatSelectModule,
   MatSliderModule,
   MatToolbarModule,
-  MatSlideToggleModule
+  MatSlideToggleModule, MatSnackBarModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
@@ -23,6 +23,8 @@ import { ListComponent } from './list/list.component';
 import { TipsComponent } from './tips/tips.component';
 import {RouterModule, Routes} from '@angular/router';
 import {HttpModule} from '@angular/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 const router : Routes = [
   {path : '', component: ListComponent},
   {path:'tips',component:TipsComponent},
@@ -42,7 +44,7 @@ const router : Routes = [
     FormsModule,
     BrowserModule,
     MatAutocompleteModule, MatBadgeModule, MatButtonModule, MatIconModule, MatSelectModule,
-    MatCardModule, MatInputModule, MatSliderModule, MatToolbarModule,MatSlideToggleModule, BrowserAnimationsModule
+    MatCardModule, MatInputModule, MatSliderModule, MatToolbarModule,MatSlideToggleModule, BrowserAnimationsModule, MatSnackBarModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [GeolocationService, DataService],
   bootstrap: [AppComponent]
